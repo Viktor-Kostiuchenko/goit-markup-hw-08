@@ -1,0 +1,45 @@
+.staff {
+  @include section();
+  background-color: $primary-bcg-color;
+}
+
+.employee {
+  @extend %list;
+
+  display: flex;
+  margin-right: calc(-1 * $item-gap);
+}
+
+.employee__card {
+  flex-basis: calc(100% / 4 - $item-gap);
+
+  width: 270px;
+  background-color: $primary-white-color;
+  box-shadow: $team-member-shadow;
+  border-radius: 1px;
+
+  &:not(:last-child) {
+    margin-right: $item-gap;
+  }
+}
+
+.employee__info {
+  padding: 30px 0;
+}
+
+.employee__name {
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.employee__position {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}

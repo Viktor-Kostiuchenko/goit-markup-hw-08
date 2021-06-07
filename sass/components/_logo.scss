@@ -1,0 +1,45 @@
+.logo {
+  color: $logo-color;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.footer__logo {
+  color: $primary-white-color;
+}
+
+.logo__accent {
+  color: $accent-color;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.3);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.3);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.animation {
+  animation-name: beat;
+  animation-duration: 750ms;
+  animation-timing-function: ease-in-out;
+}

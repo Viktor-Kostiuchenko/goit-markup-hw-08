@@ -1,0 +1,62 @@
+/** Footer */
+.footer {
+  padding: 60px 0;
+
+  background-color: $secondary-bcg-color;
+}
+
+.footer__container {
+  @include flex($cross: baseline);
+}
+
+.company-address {
+  margin-right: 70px;
+}
+
+.company-address__box {
+  margin-top: 20px;
+}
+
+.company-address__list {
+  @extend %list;
+}
+
+.company-address__link {
+  color: $footer-contact-color;
+  transition: color $duration-timing-function;
+  text-decoration: none;
+  font-style: normal;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.company-address__link--mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.company-address__link--location {
+  display: inline-block;
+  margin-bottom: 9px;
+
+  color: $primary-white-color;
+}
+
+.social-list__network--grey {
+  background-color: $network-firm-color;
+}
+
+.social-list__icon--white {
+  fill: $primary-white-color;
+}
+
+.company-socials__call {
+  display: block;
+  margin-bottom: 20px;
+  color: $primary-white-color;
+  text-transform: uppercase;
+  line-height: 1.17;
+}

@@ -1,0 +1,71 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $backdrop-bcg-color;
+
+  opacity: 1;
+  z-index: 99;
+
+  transition: opacity $duration-timing-function,
+    visability $duration-timing-function;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  & .modal.modal {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 40px;
+  margin-top: 0;
+
+  min-height: 581px;
+  min-width: 528px;
+  border-radius: 4px;
+
+  background-color: $primary-white-color;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $duration-timing-function;
+}
+
+.close__icon {
+  fill: $close-icon-color;
+  transition: fill $duration-timing-function;
+}
+
+.close {
+  @include flex();
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  border: 1px solid $close-border-color;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover .close__icon,
+  &:focus .close__icon {
+    fill: $accent-color;
+  }
+}
