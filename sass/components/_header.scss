@@ -1,56 +1,96 @@
 .header {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   top: 0;
   left: 0;
-  min-height: 80px;
-  width: 100%;
+  min-height: 60px;
 
   border-bottom: 1px solid $header-border-color;
   background-color: $primary-white-color;
 
   z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .header__container {
-  @include flex();
+  @media screen and (min-width: 768px) {
+    @include flex();
+  }
 }
 
 .header__navigation {
-  @include flex();
+  @media screen and (min-width: 768px) {
+    @include flex();
+  }
 }
 
 /** Site navigation */
 .site-nav {
+  display: none;
   @extend %list;
 
-  display: flex;
-  margin-left: 93px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .contact-nav {
+  display: none;
   @extend %list;
 
-  display: flex;
-  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: inline;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
-.site-nav__item:not(:last-child),
+.site-nav__item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+}
+
 .contact-nav__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
 }
 
 .site-nav__link {
   @extend %header__link;
+
+  padding: 32px 0;
 
   color: $title-text-color;
   transition: color $duration-timing-function;
 }
 
 .contact-nav__link {
-  @include flex();
   @extend %header__link;
-
   color: $primary-text-color;
   transition: color $duration-timing-function;
 
@@ -58,12 +98,20 @@
   &:focus .contact-nav__icon {
     fill: $accent-color;
   }
+
+  @media screen and (min-width: 768px) {
+    @include flex($main: start);
+  }
 }
 
 .contact-nav__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
   transition: fill $duration-timing-function;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
 
 .site-nav__link--active {
