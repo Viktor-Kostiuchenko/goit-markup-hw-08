@@ -1,25 +1,53 @@
 .staff {
-  @include section();
+  @include section(60px, 60px);
   background-color: $primary-bcg-color;
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+  }
 }
 
 .employee {
   @extend %list;
 
-  display: flex;
-  margin-right: calc(-1 * $item-gap);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: calc(-1 * #{$item-gap});
+  }
 }
 
 .employee__card {
-  flex-basis: calc(100% / 4 - $item-gap);
-
-  width: 270px;
+  width: 450px;
   background-color: $primary-white-color;
   box-shadow: $team-member-shadow;
   border-radius: 1px;
 
   &:not(:last-child) {
-    margin-right: $item-gap;
+    margin-bottom: $item-gap;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-bottom: 30px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: $item-gap;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - #{$item-gap});
+
+    &:not(:last-child) {
+      margin-right: $item-gap;
+      margin-bottom: 0;
+    }
   }
 }
 
