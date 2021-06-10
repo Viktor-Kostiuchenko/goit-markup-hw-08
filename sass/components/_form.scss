@@ -4,11 +4,21 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $title-text-color;
+
+  @media screen and (max-width: $tablet-max-width) {
+    width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop-min-width) {
+    line-height: 1.15;
+  }
 }
 
 .form__field {
