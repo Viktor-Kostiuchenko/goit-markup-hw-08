@@ -1,7 +1,7 @@
 .clients {
   @include section(60px, 60px);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     @include section(94px, 94px);
   }
 }
@@ -11,13 +11,13 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     @include flex($main: space-between);
   }
 }
 
 .client-list__item {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mobile-max-width) {
     flex-basis: calc(100% / 2 - #{$item-gap});
     margin-bottom: 30px;
     margin-right: 30px;
@@ -30,7 +30,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-width) {
     flex-basis: calc(100% / 3 - #{$item-gap});
     margin-bottom: 30px;
     margin-right: 30px;
@@ -42,7 +42,7 @@
       margin-right: 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop-min-width) {
       flex-basis: calc(100% / 6 - #{$item-gap});
       margin-right: 0;
       margin-bottom: 0;
@@ -77,11 +77,11 @@
   height: 92px;
   width: 210px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-width) {
     width: 226px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     width: 170px;
   }
 }

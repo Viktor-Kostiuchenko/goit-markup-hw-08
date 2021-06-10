@@ -2,7 +2,7 @@
   @include section(60px, 60px);
   background-color: $primary-bcg-color;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     @include section(94px, 94px);
   }
 }
@@ -10,11 +10,11 @@
 .employee {
   @extend %list;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-width) {
     display: flex;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     margin-right: calc(-1 * #{$item-gap});
   }
 }
@@ -29,7 +29,7 @@
     margin-bottom: $item-gap;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-width) {
     width: 354px;
     margin-bottom: 30px;
 
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     width: calc(100% / 4 - #{$item-gap});
 
     &:not(:last-child) {

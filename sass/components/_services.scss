@@ -1,7 +1,7 @@
 .services {
   @include section(47px, 94px);
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $tablet-max-width) {
     display: none;
   }
 }

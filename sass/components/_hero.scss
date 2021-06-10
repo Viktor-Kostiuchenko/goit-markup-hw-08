@@ -14,11 +14,11 @@
   // background-position: center;
   // background-size: cover;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-min-width) {
     max-width: 1199px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     padding: 200px 0;
     height: 600px;
     max-width: 1600px;
@@ -38,7 +38,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop-min-width) {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
