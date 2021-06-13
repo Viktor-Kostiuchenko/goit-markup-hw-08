@@ -9,12 +9,11 @@
 
 .employee {
   @extend %list;
+  margin-bottom: calc(-1 * #{$item-gap});
 
   @media screen and (min-width: $tablet-min-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-  @media screen and (min-width: $desktop-min-width) {
     margin-right: calc(-1 * #{$item-gap});
   }
 }
@@ -25,29 +24,16 @@
   box-shadow: $team-member-shadow;
   border-radius: 1px;
 
-  &:not(:last-child) {
-    margin-bottom: $item-gap;
-  }
+  margin-bottom: $item-gap;
 
   @media screen and (min-width: $tablet-min-width) {
-    width: 354px;
-    margin-bottom: 30px;
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-    }
-    &:nth-child(2n + 1) {
-      margin-right: $item-gap;
-    }
+    // width: 354px;
+    width: calc(100% / 2 - #{$item-gap});
+    margin-right: $item-gap;
   }
 
   @media screen and (min-width: $desktop-min-width) {
     width: calc(100% / 4 - #{$item-gap});
-
-    &:not(:last-child) {
-      margin-right: $item-gap;
-      margin-bottom: 0;
-    }
   }
 }
 

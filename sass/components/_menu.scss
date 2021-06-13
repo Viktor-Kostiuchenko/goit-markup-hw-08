@@ -12,15 +12,15 @@
   }
 }
 
-.menu-button .icon-cross {
+.menu-button_icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .menu-button_icon-cross {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.menu-button.is-open .menu-button_icon-menu {
   display: none;
 }
 
@@ -29,9 +29,10 @@
   background-color: $primary-white-color;
 
   @media screen and (max-width: $mobile-max-width) {
+    padding: 48px 40px;
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     width: 100%;
 
