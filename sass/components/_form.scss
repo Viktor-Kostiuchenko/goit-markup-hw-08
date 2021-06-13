@@ -24,7 +24,7 @@
 .form__field {
   display: flex;
   flex-direction: column;
-  width: 448px;
+  // width: 448px;
   margin: 0 auto 10px;
 
   position: relative;
@@ -91,11 +91,15 @@
   }
 
   &::placeholder {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
 
     color: $placeholder-color;
+
+    @media screen and (min-width: $desktop-min-width) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -110,8 +114,8 @@
   display: block;
   margin-bottom: 0px;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
 
   color: $primary-text-color;

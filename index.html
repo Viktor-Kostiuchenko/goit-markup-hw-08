@@ -27,38 +27,45 @@
                     aria-controls="menu-container"
                     data-menu-button>
                         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                            <use class="icon-cross" href="./images/icons/sprite.svg#cross"></use>
-                            <use class="icon-menu" href="./images/icons/sprite.svg#menu"></use>
+                            <use class="menu-button_icon-cross" href="./images/icons/sprite.svg#cross"></use>
+                            <use class="menu-button_icon-menu" href="./images/icons/sprite.svg#menu"></use>
                         </svg>
                     </button>
 
                     
-<div class="menu-container is-open" id="menu-container" data-menu>
-                    <ul class="site-nav">
+                    <div class="menu-container is-open" id="menu-container" data-menu>
+                        <ul class="site-nav">
                             <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="./index.html" >Студия</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html" >Портфолио</a></li>
                             <li class="site-nav__item"><a class="site-nav__link" href="" >Контакты</a></li>
-                    </ul>
+                        </ul>
                      
-                    <ul class="contact-nav">
-                        <li class="contact-nav__item">
-                            <a class="contact-nav__link" href="mailto:info@devstudio.com" aria-label="отправить письмо">
-                                <svg class="contact-nav__icon" width="16" height="12">
-                                    <use href="./images/icons/sprite.svg#envelope"></use>
-                                </svg>
-                                info@devstudio.com
-                            </a>   
-                        </li>
-                        <li class="contact-nav__item">
-                            <a class="contact-nav__link" href="tel:+380961111111" aria-label="позвонить">
-                                <svg class="contact-nav__icon" width="10" height="16">
-                                    <use href="./images/icons/sprite.svg#smartphone"></use>
-                                </svg>
-                                +38 096 111 11 11
-                            </a>
-                        </li>
-                    </ul>
-</div>
+                        <ul class="contact-nav">
+                            <li class="contact-nav__item">
+                                <a class="contact-nav__link" href="mailto:info@devstudio.com" aria-label="отправить письмо">
+                                    <svg class="contact-nav__icon" width="16" height="12">
+                                        <use href="./images/icons/sprite.svg#envelope"></use>
+                                    </svg>
+                                    info@devstudio.com
+                                </a>   
+                            </li>
+                            <li class="contact-nav__item">
+                                <a class="contact-nav__link contact-nav__link--tel" href="tel:+380961111111" aria-label="позвонить">
+                                    <svg class="contact-nav__icon" width="10" height="16">
+                                        <use href="./images/icons/sprite.svg#smartphone"></use>
+                                    </svg>
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="socials-nav">
+                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Instagram</a></li>
+                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Twitter</a></li>
+                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Facebook</a></li>
+                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Linkedin</a></li>
+                        </ul>
+            
+                    </div>
                 </nav>
             </div>
     </header>
@@ -125,7 +132,26 @@
                 <ul class="service-list">
                     <li class="service-list__item"> 
                         <div class="service-list__thumb">
-                            <img class="service-list__image" src="./images/main-page/desktop-apps.jpg" alt="веб-разработка" width="370" height="294"> 
+                            <picture>
+                                <source
+                                srcset="./images/main-page/desktop-apps-desktop.webp 370w, 
+                                ./images/main-page/desktop-apps-desktop@2x.webp 740w
+                                "
+                                type="image/webp">
+
+
+                                <img 
+                                srcset="
+                                ./images/main-page/desktop-apps-desktop.jpg 370w,
+                                ./images/main-page/desktop-apps-desktop@2x.jpg 740w
+                                
+                                "
+                                
+                                src="./images/main-page/desktop-apps-desktop.jpg" alt="веб-разработка"
+                                sizes="(min-width: 960px) 25vw, (min-width: 576px) 50vw,  100vw">
+                            </picture>
+
+                            <!-- <img class="service-list__image" src="./images/main-page/desktop-apps.jpg" alt="веб-разработка" width="370" height="294">  -->
                             <div class="service-list__wrapper">
                                 <h3 class="service-list__title">Десктопные приложения</h3>
                             </div>
