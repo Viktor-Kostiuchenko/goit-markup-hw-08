@@ -13,34 +13,35 @@
 .portfolio__list {
   @extend %list;
 
+  margin-bottom: calc(-1 * #{$item-gap});
+
+  margin-top: 40px;
+
   @media screen and (min-width: $tablet-min-width) {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    margin-right: calc(-1 * #{$item-gap});
+
+    margin-top: 30px;
   }
 
   @media screen and (min-width: $desktop-min-width) {
-    margin-right: calc(-1 * #{$item-gap});
-    margin-bottom: calc(-1 * #{$item-gap});
+    margin-top: 50px;
   }
 }
 
 .portfolio__item {
-  &:not(:last-child) {
-    margin-bottom: $item-gap;
-  }
+  margin-bottom: $item-gap;
 
-  @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-    width: 354px;
-    &:nth-child(even) {
-      margin-left: $item-gap;
-    }
+  @media screen and (min-width: $tablet-min-width) {
+    // width: 354px;
+    margin-right: $item-gap;
+    flex-basis: calc(100% / 2 - #{$item-gap});
   }
 
   @media screen and (min-width: $desktop-min-width) {
     flex-basis: calc(100% / 3 - #{$item-gap});
-    margin-right: $item-gap;
-    margin-bottom: $item-gap;
   }
 }
 
