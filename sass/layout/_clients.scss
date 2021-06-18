@@ -8,21 +8,26 @@
 
 .client-list {
   @extend %list;
-  display: flex;
+  @include flex();
   flex-wrap: wrap;
 
   margin-bottom: calc(-1 * #{$item-gap});
-  margin-right: calc(-1 * #{$item-gap});
 
+  @media screen and (min-width: $desktop-min-width) {
+    margin-right: calc(-1 * #{$item-gap});
+  }
   @media screen and (min-width: $desktop-min-width) {
     @include flex($main: space-between);
   }
 }
 
 .client-list__item {
-  flex-basis: calc(100% / 2 - #{$item-gap});
   margin-bottom: $item-gap;
-  margin-right: $item-gap;
+
+  @media screen and (min-width: $mobile-min-width) {
+    flex-basis: calc(100% / 2 - #{$item-gap});
+    margin-right: $item-gap;
+  }
 
   @media screen and (min-width: $tablet-min-width) {
     flex-basis: calc(100% / 3 - #{$item-gap});

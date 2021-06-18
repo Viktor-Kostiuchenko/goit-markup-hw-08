@@ -1,14 +1,18 @@
-.staff {
+.features {
   @include section(60px, 60px);
-  background-color: $primary-bcg-color;
 
   @media screen and (min-width: $desktop-min-width) {
-    @include section(94px, 94px);
+    @include section(94px, 47px);
   }
 }
 
-.employee {
+.features .section__title {
+  @extend %visually-hidden;
+}
+
+.feature-list {
   @extend %list;
+  display: block;
   margin-bottom: calc(-1 * #{$item-gap});
 
   @media screen and (min-width: $tablet-min-width) {
@@ -18,13 +22,12 @@
   }
 }
 
-.employee__card {
-  width: 450px;
-  background-color: $primary-white-color;
-  box-shadow: $team-member-shadow;
-  border-radius: 1px;
-
+.feature-list__item {
   margin-bottom: $item-gap;
+
+  @media screen and (min-width: $mobile-min-width) {
+    width: 450px;
+  }
 
   @media screen and (min-width: $tablet-min-width) {
     // width: 354px;
@@ -34,26 +37,28 @@
 
   @media screen and (min-width: $desktop-min-width) {
     width: calc(100% / 4 - #{$item-gap});
+    // width: 270px;
   }
 }
 
-.employee__info {
-  padding: 30px 0;
+.feature-list__background {
+  @include flex();
+
+  height: 120px;
+  margin-bottom: $item-gap;
+
+  background-color: $primary-bcg-color;
 }
 
-.employee__name {
+.feature-list__title {
   margin-bottom: 10px;
 
   color: $title-text-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-}
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
 
-.employee__position {
-  margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
+  @media screen and (max-width: $mobile-max-width) {
+    text-align: center;
+  }
 }
