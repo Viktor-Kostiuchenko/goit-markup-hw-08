@@ -8,9 +8,7 @@
     <link rel="shortcut icon" href="./images/icons/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/styles.css"> -->
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -19,55 +17,74 @@
 
     <!--! Шапка сайта-->
     <header class="header">
-            <div class="container header__container">
-                <nav class="header__navigation">
-                    <a class="logo animation" href="./index.html" lang="en" > <span class="logo__accent">Web</span>Studio</a>
-                    <button type="button" class="menu-button is-open" 
-                    aria-expanded="false"
-                    aria-controls="menu-container"
-                    data-menu-button>
+        <div class="container header__container">
+            <nav class="header__navigation">
+                <a class="logo animation" href="./index.html" lang="en"> <span class="logo__accent">Web</span>Studio</a>
+                <ul class="site-nav">
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="./index.html" >Студия</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html" >Портфолио</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="#" >Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <button type="button" class="header__mobile-menu-btn is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg class="header__mobile-menu-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use href="./images/icons/sprite.svg#menu"></use>
+                </svg>
+            </button>
+
+            <ul class="contact-nav">
+                <li class="contact-nav__item">
+                    <a class="contact-nav__link contact-nav__link--mail" href="mailto:info@devstudio.com" aria-label="отправить письмо">
+                        <svg class="contact-nav__icon" width="16" height="12">
+                            <use href="./images/icons/sprite.svg#envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>   
+                </li>
+                <li class="contact-nav__item">
+                    <a class="contact-nav__link" href="tel:+380961111111" aria-label="позвонить">
+                        <svg class="contact-nav__icon" width="10" height="16">
+                            <use href="./images/icons/sprite.svg#smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button type="button" class="mobile-menu__close-btn is-open" aria-expanded="false" aria-controls="menu-container" data-menu-close>
                         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                            <use class="menu-button_icon-cross" href="./images/icons/sprite.svg#cross"></use>
-                            <use class="menu-button_icon-menu" href="./images/icons/sprite.svg#menu"></use>
+                            <use class="mobile-menu__close-icon" href="./images/icons/sprite.svg#cross"></use>
                         </svg>
                     </button>
-
-                    
-                    <div class="menu-container is-open" id="menu-container" data-menu>
-                        <ul class="site-nav">
-                            <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="./index.html" >Студия</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html" >Портфолио</a></li>
-                            <li class="site-nav__item"><a class="site-nav__link" href="" >Контакты</a></li>
-                        </ul>
-                     
-                        <ul class="contact-nav">
-                            <li class="contact-nav__item">
-                                <a class="contact-nav__link" href="mailto:info@devstudio.com" aria-label="отправить письмо">
-                                    <svg class="contact-nav__icon" width="16" height="12">
-                                        <use href="./images/icons/sprite.svg#envelope"></use>
-                                    </svg>
-                                    info@devstudio.com
-                                </a>   
-                            </li>
-                            <li class="contact-nav__item">
-                                <a class="contact-nav__link contact-nav__link--tel" href="tel:+380961111111" aria-label="позвонить">
-                                    <svg class="contact-nav__icon" width="10" height="16">
-                                        <use href="./images/icons/sprite.svg#smartphone"></use>
-                                    </svg>
-                                    +38 096 111 11 11
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="socials-nav">
-                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Instagram</a></li>
-                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Twitter</a></li>
-                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Facebook</a></li>
-                            <li class="socials-nav_item"> <a class="socials-nav_link" href="">Linkedin</a></li>
-                        </ul>
-            
-                    </div>
-                </nav>
+                    <ul class="mobile-menu__nav">
+                        <li class="mobile-menu__nav-item"><a href="./index.html" class="mobile-menu__nav-link mobile-menu__nav-link--active">Студия</a></li>
+                        <li class="mobile-menu__nav-item"><a href="./portfolio.html" class="mobile-menu__nav-link">Портфолио</a></li>
+                        <li class="mobile-menu__nav-item"><a href="#" class="mobile-menu__nav-link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__contact-item">
+                            <a class="mobile-menu__contact-link" href="tel:+380961111111" aria-label="позвонить">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-menu__contact-item">
+                            <a class="mobile-menu__contact-link mobile-menu__contact-mail" href="mailto:info@devstudio.com" aria-label="отправить письмо">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__socials">
+                        <li class="mobile-menu__social-item"> <a class="mobile-menu__social-link" href="#">Instagram</a></li>
+                        <li class="mobile-menu__social-item"> <a class="mobile-menu__social-link" href="#">Twitter</a></li>
+                        <li class="mobile-menu__social-item"> <a class="mobile-menu__social-link" href="#">Facebook</a></li>
+                        <li class="mobile-menu__social-item"> <a class="mobile-menu__social-link" href="#">Linkedin</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
     </header>
 
     <!--! Основное содержимое сайта-->
@@ -133,25 +150,18 @@
                     <li class="service-list__item"> 
                         <div class="service-list__thumb">
                             <picture>
-                                <source
-                                srcset="./images/main-page/desktop-apps-desktop.webp 370w, 
-                                ./images/main-page/desktop-apps-desktop@2x.webp 740w
-                                "
-                                type="image/webp">
-
-
-                                <img 
-                                srcset="
-                                ./images/main-page/desktop-apps-desktop.jpg 370w,
-                                ./images/main-page/desktop-apps-desktop@2x.jpg 740w
-                                
-                                "
-                                
-                                src="./images/main-page/desktop-apps-desktop.jpg" alt="веб-разработка"
-                                sizes="(min-width: 960px) 25vw, (min-width: 576px) 50vw,  100vw">
+                            <source srcset="
+                                ./images/main-page/desktop/desktop-apps-desktop.webp 1x,
+                                ./images/main-page/desktop/desktop-apps-desktop@2x.webp 2x
+                                " type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/main-page/desktop/desktop-apps-desktop.jpg 1x,
+                                ./images/main-page/desktop/desktop-apps-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                            
+                            <img class="service-list__image" src="#"
+                                alt="веб-разработка"
+                                />
                             </picture>
-
-                            <!-- <img class="service-list__image" src="./images/main-page/desktop-apps.jpg" alt="веб-разработка" width="370" height="294">  -->
                             <div class="service-list__wrapper">
                                 <h3 class="service-list__title">Десктопные приложения</h3>
                             </div>
@@ -159,7 +169,18 @@
                     </li>
                     <li class="service-list__item"> 
                         <div class="service-list__thumb">
-                            <img class="service-list__image" src="./images/main-page/mobile-apps.jpg" alt="мобильная адаптация сайта" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/main-page/desktop/mobile-apps-desktop.webp 1x,
+                                    ./images/main-page/desktop/mobile-apps-desktop@2x.webp 2x
+                                    " type="image/webp" media="(min-width: 1200px)" />
+                                <source srcset="
+                                    ./images/main-page/desktop/mobile-apps-desktop.jpg 1x,
+                                    ./images/main-page/desktop/mobile-apps-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                            
+                                <img class="service-list__image" src="#" alt="мобильная адаптация сайта"
+                                    />
+                            </picture>
                             <div class="service-list__wrapper">
                                 <h3 class="service-list__title">Мобильные приложения</h3>
                             </div>
@@ -168,7 +189,18 @@
                     </li>
                     <li class="service-list__item"> 
                         <div class="service-list__thumb">
-                            <img class="service-list__image" src="./images/main-page/design-solutions.jpg" alt="графический дизайн" width="370" height="294">
+                            <picture>
+                                <source srcset="
+                                    ./images/main-page/desktop/design-solutions-desktop.webp 1x,
+                                    ./images/main-page/desktop/design-solutions-desktop@2x.webp 2x
+                                    " type="image/webp" media="(min-width: 1200px)" />
+                                <source srcset="
+                                    ./images/main-page/desktop/design-solutions-desktop.jpg 1x,
+                                    ./images/main-page/desktop/design-solutions-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                            
+                                <img class="service-list__image" src="#" alt="графический дизайн"
+                                     />
+                            </picture>
                             <div class="service-list__wrapper">
                                 <h3 class="service-list__title">Дизайнерские решения</h3>
                             </div>
@@ -184,34 +216,70 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="employee">
                     <li class="employee__card">
-                        <img class="employee__photo" src="./images/main-page/demianenko.jpg" alt="бородатый мужчина в очках и бордовой рубашке" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/main-page/desktop/demianenko-desktop.webp 1x,
+                                ./images/main-page/desktop/demianenko-desktop@2x.webp 2x
+                                " 
+                                type="image/webp" 
+                                media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/main-page/desktop/demianenko-desktop.jpg 1x,
+                                ./images/main-page/desktop/demianenko-desktop@2x.jpg 2x" 
+                                media="(min-width: 1200px)" />
+
+                            <source srcset="
+                                ./images/main-page/tablet/demianenko-tablet.webp 1x,
+                                ./images/main-page/tablet/demianenko-tablet@2x.webp 2x
+                                " 
+                                type="image/webp" 
+                                media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/main-page/tablet/demianenko-tablet.jpg 1x,
+                                ./images/main-page/tablet/emianenko-tablet@2x.jpg 2x" 
+                                media="(min-width: 768px)" />
+
+                            <source srcset="
+                                ./images/main-page/mobile/demianenko-mobile.webp 1x,
+                                ./images/main-page/mobile/demianenko-mobile@2x.webp 2x
+                                " 
+                                type="image/webp" 
+                                media="(max-width: 767px)" />
+                            <source srcset="
+                                ./images/main-page/mobile/demianenko-mobile.jpg 1x,
+                                ./images/main-page/mobile/demianenko-mobile@2x.jpg 2x" 
+                                media="(max-width: 767px)" />
+
+                            <img class="employee__photo" src="/images/main-page/mobile/demianenko-mobile.jpg" alt="бородатый мужчина в очках и бордовой рубашке" 
+                            />
+                        </picture>
                         <div class="employee__info">
                             <h3 class="employee__name">Игорь Демьяненко</h3>
                             <p class="employee__position" lang="en">Product Designer</p>
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в instagram сотрудника"> 
+                                    <a class="social-list__network" href="#" aria-label="перейти в instagram сотрудника"> 
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в twitter сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в twitter сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в facebook сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в facebook сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в linkedin сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в linkedin сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#linkedin"></use>
                                         </svg>
@@ -221,34 +289,61 @@
                         </div>
                     </li>
                     <li class="employee__card">
-                        <img class="employee__photo" src="./images/main-page/repina.jpg" alt="светловолосая девушка в очках и костюме" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/main-page/desktop/repina-desktop.webp 1x,
+                                ./images/main-page/desktop/repina-desktop@2x.webp 2x
+                                " type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/main-page/desktop/repina-desktop.jpg 1x,
+                                ./images/main-page/desktop/repina-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                        
+                            <source srcset="
+                                ./images/main-page/tablet/repina-tablet.webp 1x,
+                                ./images/main-page/tablet/repina-tablet@2x.webp 2x
+                                " type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/main-page/tablet/repina-tablet.jpg 1x,
+                                ./images/main-page/tablet/repina-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                        
+                            <source srcset="
+                                ./images/main-page/mobile/repina-mobile.webp 1x,
+                                ./images/main-page/mobile/repina-mobile@2x.webp 2x
+                                " type="image/webp" media="(max-width: 767px)" />
+                            <source srcset="
+                                ./images/main-page/mobile/repina-mobile.jpg 1x,
+                                ./images/main-page/mobile/repina-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                        
+                            <img class="employee__photo" src="/images/main-page/mobile/repina-mobile.jpg" alt="светловолосая девушка в очках и костюме"
+                                 />
+                        </picture>
                         <div class="employee__info">
                             <h3 class="employee__name">Ольга Репина</h3>
                             <p class="employee__position" lang="en">Frontend Developer</p>
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в instagram сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в instagram сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в twitter сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в twitter сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в facebook сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в facebook сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в linkedin сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в linkedin сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#linkedin"></use>
                                         </svg>
@@ -258,34 +353,61 @@
                         </div>
                     </li>
                     <li class="employee__card">
-                        <img class="employee__photo" src="./images/main-page/tarasov.jpg" alt="улыбающийся парень в светлой рубашке" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/main-page/desktop/tarasov-desktop.webp 1x,
+                                ./images/main-page/desktop/tarasov-desktop@2x.webp 2x
+                                " type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/main-page/desktop/tarasov-desktop.jpg 1x,
+                                ./images/main-page/desktop/tarasov-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                        
+                            <source srcset="
+                                ./images/main-page/tablet/tarasov-tablet.webp 1x,
+                                ./images/main-page/tablet/tarasov-tablet@2x.webp 2x
+                                " type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/main-page/tablet/tarasov-tablet.jpg 1x,
+                                ./images/main-page/tablet/tarasov-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                        
+                            <source srcset="
+                                ./images/main-page/mobile/tarasov-mobile.webp 1x,
+                                ./images/main-page/mobile/tarasov-mobile@2x.webp 2x
+                                " type="image/webp" media="(max-width: 767px)" />
+                            <source srcset="
+                                ./images/main-page/mobile/tarasov-mobile.jpg 1x,
+                                ./images/main-page/mobile/tarasov-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                        
+                            <img class="employee__photo" src="/images/main-page/mobile/tarasov-mobile.jpg" alt="улыбающийся парень в светлой рубашке"
+                                 />
+                        </picture>
                         <div class="employee__info">
                             <h3 class="employee__name">Николай Тарасов</h3>
                             <p class="employee__position" lang="en">Marketing</p>
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в instagram сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в instagram сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в twitter сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в twitter сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в facebook сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в facebook сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в linkedin сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в linkedin сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#linkedin"></use>
                                         </svg>
@@ -295,34 +417,61 @@
                         </div>
                     </li>
                     <li class="employee__card">
-                        <img class="employee__photo" src="./images/main-page/ermakov.jpg" alt="темноволосый парень в очках и черной футболки" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                ./images/main-page/desktop/ermakov-desktop.webp 1x,
+                                ./images/main-page/desktop/ermakov-desktop@2x.webp 2x
+                                " type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="
+                                ./images/main-page/desktop/ermakov-desktop.jpg 1x,
+                                ./images/main-page/desktop/ermakov-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
+                                                
+                            <source srcset="
+                                ./images/main-page/tablet/ermakov-tablet.webp 1x,
+                                ./images/main-page/tablet/ermakov-tablet@2x.webp 2x
+                                " type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/main-page/tablet/ermakov-tablet.jpg 1x,
+                                ./images/main-page/tablet/ermakov-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                                                
+                            <source srcset="
+                                ./images/main-page/mobile/ermakov-mobile.webp 1x,
+                                ./images/main-page/mobile/ermakov-mobile@2x.webp 2x
+                                " type="image/webp" media="(max-width: 767px)" />
+                            <source srcset="
+                                ./images/main-page/mobile/ermakov-mobile.jpg 1x,
+                                ./images/main-page/mobile/ermakov-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                                                
+                            <img class="employee__photo" src="/images/main-page/mobile/ermakov-mobile.jpg" alt="темноволосый парень в очках и черной футболке"
+                                 />
+                        </picture>
                         <div class="employee__info">
                             <h3 class="employee__name">Михаил Ермаков</h3>
                             <p class="employee__position" lang="en">UI Designer</p>
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в instagram сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в instagram сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в twitter сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в twitter сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в facebook сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в facebook сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a class="social-list__network" href="" aria-label="перейти в linkedin сотрудника">
+                                    <a class="social-list__network" href="#" aria-label="перейти в linkedin сотрудника">
                                         <svg class="social-list__icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#linkedin"></use>
                                         </svg>
@@ -341,42 +490,42 @@
                 <h2 class="section__title">Постоянные клиенты</h2>
                 <ul class="client-list">
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента"> 
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента"> 
                             <svg class="client-list__logo" width="41" height="47">
                                 <use href="./images/icons/sprite.svg#client1"></use>
                             </svg>
                          </a>
                     </li>
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента"> 
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента"> 
                             <svg class="client-list__logo" width="40" height="52">
                                 <use href="./images/icons/sprite.svg#client2"></use>
                             </svg> 
                         </a>
                     </li>
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента">
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента">
                             <svg class="client-list__logo" width="44" height="41">
                                 <use href="./images/icons/sprite.svg#client3"></use>
                             </svg> 
                         </a>
                     </li>
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента"> 
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента"> 
                             <svg class="client-list__logo" width="84" height="41">
                                 <use href="./images/icons/sprite.svg#client4"></use>
                             </svg> 
                         </a>
                     </li>
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента"> 
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента"> 
                             <svg class="client-list__logo" width="63" height="45">
                                 <use href="./images/icons/sprite.svg#client5"></use>
                             </svg> 
                         </a>
                     </li>
                     <li class="client-list__item"> 
-                        <a class="client-list__link" href="" aria-label="перейти на сайт клиента"> 
+                        <a class="client-list__link" href="#" aria-label="перейти на сайт клиента"> 
                             <svg class="client-list__logo" width="94" height="44" >
                                 <use href="./images/icons/sprite.svg#client6"></use> 
                             </svg> 
@@ -407,28 +556,28 @@
                 <b class="company-socials__call">присоединяйтесь</b>
                 <ul class="social-list">
                     <li class="social-list__item">
-                        <a class="social-list__network social-list__network--grey" href="" aria-label="перейти в instagram компании">
+                        <a class="social-list__network social-list__network--grey" href="#" aria-label="перейти в instagram компании">
                             <svg class="social-list__icon social-list__icon--white" width="20" height="20">
                                 <use href="./images/icons/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social-list__item"> 
-                        <a class="social-list__network social-list__network--grey" href="" aria-label="перейти в twitter компании">
+                        <a class="social-list__network social-list__network--grey" href="#" aria-label="перейти в twitter компании">
                             <svg class="social-list__icon social-list__icon--white" width="20" height="20">
                                 <use href="./images/icons/sprite.svg#twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social-list__item"> 
-                        <a class="social-list__network social-list__network--grey" href="" aria-label="перейти в facebook компании">
+                        <a class="social-list__network social-list__network--grey" href="#" aria-label="перейти в facebook компании">
                             <svg class="social-list__icon social-list__icon--white" width="20" height="20">
                                 <use href="./images/icons/sprite.svg#facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social-list__item"> 
-                        <a class="social-list__network social-list__network--grey" href="" aria-label="перейти в linkedin компании">
+                        <a class="social-list__network social-list__network--grey" href="#" aria-label="перейти в linkedin компании">
                             <svg class="social-list__icon social-list__icon--white" width="20" height="20">
                                 <use href="./images/icons/sprite.svg#linkedin"></use>
                             </svg>

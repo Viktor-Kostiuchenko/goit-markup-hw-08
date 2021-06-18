@@ -119,6 +119,11 @@
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop-min-width) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__link {
