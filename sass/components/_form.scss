@@ -9,9 +9,6 @@
   letter-spacing: 0.03em;
 
   color: $title-text-color;
-  // max-width: 370px;
-  // margin-right: auto;
-  // margin-left: auto;
 
   @media screen and (max-width: $tablet-max-width) {
     max-width: 370px;
@@ -27,7 +24,6 @@
 .form__field {
   display: flex;
   flex-direction: column;
-  // width: 448px;
   margin: 0 auto 10px;
 
   position: relative;
@@ -133,7 +129,7 @@
   color: $accent-color;
 }
 
-.send {
+.button--send {
   padding: 10px 55px;
 }
 
@@ -161,7 +157,6 @@
   }
 
   &:focus + .form__icon-checkbox {
-    // outline: -webkit-focus-ring-color auto 1px;
     box-shadow: 0 0 0 1px $black-icon-color;
   }
 }

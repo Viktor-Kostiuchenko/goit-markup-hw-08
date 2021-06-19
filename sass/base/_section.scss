@@ -1,0 +1,40 @@
+.clients {
+  @include section(60px, 60px);
+
+  @media screen and (min-width: $desktop-min-width) {
+    @include section(94px, 94px);
+  }
+}
+
+.features {
+  @include section(60px, 60px);
+
+  @media screen and (min-width: $desktop-min-width) {
+    @include section(94px, 47px);
+  }
+}
+
+.services {
+  @include section(47px, 94px);
+
+  @media screen and (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.staff {
+  @include section(60px, 60px);
+  background-color: $primary-bcg-color;
+
+  @media screen and (min-width: $desktop-min-width) {
+    @include section(94px, 94px);
+  }
+}
+
+.portfolio {
+  @include section(60px, 60px);
+
+  @media screen and (min-width: $desktop-min-width) {
+    @include section(94px, 94px);
+  }
+}

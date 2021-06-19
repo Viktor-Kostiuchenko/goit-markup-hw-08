@@ -1,20 +1,26 @@
 @import "./utils/vars";
-@import "./base/common";
-@import "./base/container";
 @import "./utils/placeholders";
 @import "./utils/mixins";
-@import "./layout/header";
+
+@import "./base/common";
+@import "./base/section";
+@import "./base/container";
+
 @import "./components/mobile-menu";
 @import "./components/logo";
-@import "./components/section-title";
-@import "./layout/hero";
+@import "./components/hero-title";
 @import "./components/button";
+@import "./components/section-title";
+@import "./components/social-networks";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/form";
+@import "./components/subscription";
+
+@import "./layout/header";
+@import "./layout/hero";
 @import "./layout/features";
 @import "./layout/services";
 @import "./layout/staff";
-@import "./components/social-networks";
 @import "./layout/clients";
 @import "./layout/footer";
-@import "./layout/subscription";
-@import "./components/modal";
-@import "./components/form";

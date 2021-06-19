@@ -1,11 +1,3 @@
-.clients {
-  @include section(60px, 60px);
-
-  @media screen and (min-width: $desktop-min-width) {
-    @include section(94px, 94px);
-  }
-}
-
 .client-list {
   @extend %list;
   @include flex();

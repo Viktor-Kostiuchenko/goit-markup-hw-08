@@ -1,2 +1,2 @@
-# goit-markup-hw-07
-Tech Skills. HTML + CSS. HW #7
+# goit-markup-hw-08
+Tech Skills. HTML + CSS. HW #8

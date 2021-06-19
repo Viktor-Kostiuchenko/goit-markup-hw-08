@@ -1,15 +1,19 @@
 @import "./utils/vars";
-@import "./base/common";
-@import "./base/container";
 @import "./utils/placeholders";
 @import "./utils/mixins";
-@import "./layout/header";
+
+@import "./base/common";
+@import "./base/section";
+@import "./base/container";
+
 @import "./components/mobile-menu";
 @import "./components/logo";
 @import "./components/section-title";
-@import "./layout/filters";
 @import "./components/button";
-@import "./layout/projects";
 @import "./components/social-networks";
+@import "./components/subscription";
+
+@import "./layout/header";
+@import "./layout/filters";
+@import "./layout/projects";
 @import "./layout/footer";
-@import "./layout/subscription";
