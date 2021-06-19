@@ -9,9 +9,12 @@
   letter-spacing: 0.03em;
 
   color: $title-text-color;
+  // max-width: 370px;
+  // margin-right: auto;
+  // margin-left: auto;
 
   @media screen and (max-width: $tablet-max-width) {
-    width: 370px;
+    max-width: 370px;
     margin-right: auto;
     margin-left: auto;
   }
