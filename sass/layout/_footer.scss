@@ -16,9 +16,10 @@
 }
 
 .company-address {
+  text-align: center;
+
   @media screen and (max-width: $mobile-max-width) {
     margin-bottom: 60px;
-    text-align: center;
   }
 
   @media screen and (min-width: $tablet-min-width) {

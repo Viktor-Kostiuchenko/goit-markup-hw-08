@@ -3,6 +3,7 @@
 
   top: 0;
   left: 0;
+  width: 100%;
   min-height: 60px;
 
   border-bottom: 1px solid $header-border-color;
@@ -111,12 +112,11 @@
 
   @media screen and (min-width: $tablet-min-width) {
     display: inline;
-    margin-left: 84px;
+    margin-left: auto;
   }
 
   @media screen and (min-width: $desktop-min-width) {
     display: flex;
-    margin-left: 305px;
   }
 }
 
