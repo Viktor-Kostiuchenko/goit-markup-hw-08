@@ -15,14 +15,6 @@
     visability $duration-timing-function;
 
   overflow-y: scroll;
-
-  @media screen and (max-width: $mobile-max-width) {
-    padding: 93px 15px;
-  }
-
-  @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-    padding: 208px 159px;
-  }
 }
 
 .backdrop.is-hidden {
@@ -36,9 +28,16 @@
 }
 
 .modal {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
   padding: 40px;
   margin-top: 0;
-  // min-height: 609px;
+
+  max-width: 450px;
+  width: 100%;
 
   border-radius: 4px;
 
@@ -46,18 +45,7 @@
 
   transition: transform $duration-timing-function;
 
-  @media screen and (min-width: $tablet-min-width) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    max-width: 450px;
-    width: 100%;
-    // min-height: 581px;
-    // max-width: 528px;
-
-    transform: translate(-50%, -50%) scale(1);
-  }
+  transform: translate(-50%, -50%) scale(1);
 
   @media screen and (min-width: $desktop-min-width) {
     max-width: 528px;
@@ -75,11 +63,6 @@
   position: absolute;
   top: 8px;
   right: 8px;
-
-  @media screen and (max-width: $mobile-max-width) {
-    top: 101px;
-    right: 23px;
-  }
 
   width: 30px;
   height: 30px;
