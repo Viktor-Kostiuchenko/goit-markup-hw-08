@@ -61,6 +61,10 @@
 
   border: 1px solid $portfolio-border-color;
   border-top: none;
+
+  @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    padding: 20px 18px;
+  }
 }
 
 .project__title {
