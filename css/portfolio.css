@@ -527,8 +527,8 @@ ol {
 
 @media screen and (max-width: 767px) {
   .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -818,6 +818,12 @@ ol {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__info {
+    padding: 20px 18px;
+  }
 }
 
 .project__title {
