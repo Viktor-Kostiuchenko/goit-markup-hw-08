@@ -4,10 +4,8 @@
   flex-wrap: wrap;
 
   margin-bottom: calc(-1 * #{$item-gap});
+  margin-right: calc(-1 * #{$item-gap});
 
-  @media screen and (min-width: $mobile-min-width) {
-    margin-right: calc(-1 * #{$item-gap});
-  }
   @media screen and (min-width: $desktop-min-width) {
     @include flex($main: space-between);
   }
@@ -16,10 +14,8 @@
 .client-list__item {
   margin-bottom: $item-gap;
 
-  @media screen and (min-width: $mobile-min-width) {
-    flex-basis: calc(100% / 2 - #{$item-gap});
-    margin-right: $item-gap;
-  }
+  flex-basis: calc(100% / 2 - #{$item-gap});
+  margin-right: $item-gap;
 
   @media screen and (min-width: $tablet-min-width) {
     flex-basis: calc(100% / 3 - #{$item-gap});
@@ -38,6 +34,7 @@
 
 .client-list__link {
   @include flex();
+  height: 92px;
 
   border-radius: 4px;
 
@@ -53,9 +50,6 @@
   &:focus .client-list__logo {
     fill: $accent-color;
   }
-
-  height: 92px;
-  width: 210px;
 
   @media screen and (min-width: $tablet-min-width) {
     width: 226px;

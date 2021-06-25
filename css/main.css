@@ -646,6 +646,7 @@ ol {
 }
 
 .form__icon-checkbox {
+  min-width: 16px;
   margin-right: 8px;
   border: 2px solid #212121;
   border-radius: 2px;
@@ -1168,12 +1169,7 @@ ol {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: calc(-1 * 30px);
-}
-
-@media screen and (min-width: 480px) {
-  .client-list {
-    margin-right: calc(-1 * 30px);
-  }
+  margin-right: calc(-1 * 30px);
 }
 
 @media screen and (min-width: 1200px) {
@@ -1186,13 +1182,8 @@ ol {
 
 .client-list__item {
   margin-bottom: 30px;
-}
-
-@media screen and (min-width: 480px) {
-  .client-list__item {
-    flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
-  }
+  flex-basis: calc(100% / 2 - 30px);
+  margin-right: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1216,11 +1207,10 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  height: 92px;
-  width: 210px;
 }
 
 .client-list__link:hover, .client-list__link:focus {
