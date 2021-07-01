@@ -44,8 +44,8 @@
 
   cursor: pointer;
 
-  &:hover .close__icon,
-  &:focus .close__icon {
+  &:hover .modal__close-icon,
+  &:focus .modal__close-icon {
     fill: $accent-color;
   }
 }

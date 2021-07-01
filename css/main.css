@@ -510,8 +510,8 @@ ol {
   cursor: pointer;
 }
 
-.modal__close-btn:hover .close__icon,
-.modal__close-btn:focus .close__icon {
+.modal__close-btn:hover .modal__close-icon,
+.modal__close-btn:focus .modal__close-icon {
   fill: #2196f3;
 }
 
